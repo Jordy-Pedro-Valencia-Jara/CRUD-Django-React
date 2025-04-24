@@ -8,18 +8,25 @@ import "./App.css";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <div className="container mx-auto">
+      <div
+        className="min-h-screen  bg-cover"
+        style={{
+          backgroundImage: `url('https://preview.redd.it/8j16f7e41qb91.jpg?auto=webp&s=e1320d2c734ca979aad48f98b9fc672ab2a56009')`,
+        }}
+      >
+        <BrowserRouter>
           <Navigation />
-          <Routes>
-            <Route path="/" element={<Navigate to={"/prueba"} />} />
-            <Route path="/prueba" element={<Prueba />} />
-            <Route path="/tasks" element={<TasksPages />} />
-            <Route path="/tasks-create" element={<TaskFormPages />} />
-            <Route path="/tasks/:id" element={<TaskFormPages />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+          <div className="mx-auto w-[90%]  h-[560px] m-2 bg-white/10">
+            <Routes>
+              <Route path="/" element={<Navigate to={"/prueba"} />} />
+              <Route path="/prueba" element={<Prueba />} />
+              <Route path="/tasks" element={<TasksPages />} />
+              <Route path="/tasks-create" element={<TaskFormPages />} />
+              <Route path="/tasks/:id" element={<TaskFormPages />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </div>
     </>
   );
 }
