@@ -1,6 +1,6 @@
 import axios from "axios";
 const apiURL=axios.create({
-    baseURL:'http://localhost:8000/tasks/api/v1/tasks/',
+    baseURL:'https://crud-django-react-1il6.onrender.com/tasks/api/v1/tasks/',
 })
 export const getAllTasks=()=>apiURL.get('/');
 export const getTask=(id)=>apiURL.get(`/${id}/`);

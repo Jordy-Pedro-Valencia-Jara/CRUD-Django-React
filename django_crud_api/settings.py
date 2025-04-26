@@ -127,5 +127,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #servidores permitidos de conectar
 CORS_ALLOWED_ORIGINS=[
-    "http://localhost:5173"    
+    "https://crud-django-react-1.onrender.com"    
 ]
