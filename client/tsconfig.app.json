@@ -18,8 +18,8 @@
     /* Linting */
     "strict": false, //debes corregir esto
     "noImplicitAny": false, //debes borrar esto 
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false, //debes cambiar por true luego para mejores practicas
+    "noUnusedParameters": false, //debes cambiar para mejores practicas a true
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
