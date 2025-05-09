@@ -95,8 +95,9 @@ WSGI_APPLICATION = 'django_crud_api.wsgi.application'
 #        }
 #    }
 
-DATABASE={
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+DATABASES={
+    #toma en cuenta esto si funciona 
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
