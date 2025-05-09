@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import TaskFormPages from "./pages/TaskFormPages";
 import TasksPages from "./pages/TasksPages";
@@ -6,6 +7,16 @@ import Prueba from "./pages/Prueba";
 import "./App.css";
 
 function App() {
+  // 👇 Este useEffect se ejecuta cuando se monta el componente
+  useEffect(() => {
+    // Llama al backend para "despertarlo"
+    fetch("https://crud-django-react-1il6.onrender.com/tasks/api/v1/tasks/")
+      .then((res) => res.ok && console.log("✅ Backend despertado"))
+      .catch((err) =>
+        console.error("⚠️ No se pudo despertar el backend:", err)
+      );
+  }, []);
+
   return (
     <>
       <div
